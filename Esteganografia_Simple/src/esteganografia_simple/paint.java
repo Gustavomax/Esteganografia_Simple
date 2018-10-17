@@ -108,5 +108,5 @@ public class paint extends JPanel {
             JOptionPane.showMessageDialog(null, "Erro: não foi possível guardar a imagem...");
 	}
    }
-
+      // teste
 }
