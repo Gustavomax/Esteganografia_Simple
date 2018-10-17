@@ -1,7 +1,7 @@
 package Interface;
 
-import esteganografia_simple.Esteganos;
-import esteganografia_simple.paint;
+import Esteganografia_Simples.Esteganografia;
+import Esteganografia_Simples.paint;
 import java.awt.image.BufferedImage;
 import javax.swing.JOptionPane;
 
@@ -9,7 +9,7 @@ public class InterCifra extends javax.swing.JFrame {
 
     BufferedImage foto;
     paint minhapaint = new paint();
-    Esteganos esteganos = new Esteganos();
+    Esteganografia esteganos = new Esteganografia();
 
     /**
      * Cria formulário interfaz

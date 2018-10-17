@@ -1,9 +1,9 @@
-package esteganografia_simple;
+package Esteganografia_Simples;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
-public class Esteganos {
+public class Esteganografia {
     /* firma= permite reconhecer se uma foto tem ou não uma mensagem oculta */
     private String firma="SI";
     /* Ele armazenará o tamanho da mensagem mais o tamanho da assinatura mais seu próprio tamanho */
@@ -17,7 +17,7 @@ public class Esteganos {
     private String mensagem_original;
     private int contador = 0;
 
-    public Esteganos(){}
+    public Esteganografia(){}
 
     /* Dada a mensagem (String) que está oculta, vincula-se à assinatura
        como o comprimento total da mensagem */

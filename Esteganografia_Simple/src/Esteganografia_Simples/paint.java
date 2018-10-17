@@ -1,4 +1,4 @@
-package esteganografia_simple;
+package Esteganografia_Simples;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -108,5 +108,5 @@ public class paint extends JPanel {
             JOptionPane.showMessageDialog(null, "Erro: não foi possível guardar a imagem...");
 	}
    }
-      
+
 }

@@ -1,4 +1,4 @@
-package esteganografia_simple;
+package Esteganografia_Simples;
 
 import Interface.InterCifra;
 
