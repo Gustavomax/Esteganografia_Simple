@@ -15,7 +15,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class paint extends JPanel {
     private BufferedImage foto;
-    //tamanho do recipiente
+    //Tamanho do recipiente
     private int largura=0;
     private int altura=0;
     private BufferedImage Imagem_em_memoria;
@@ -43,17 +43,17 @@ public class paint extends JPanel {
         return new Dimension(largura,altura);
     }
 
-    //o método paint é substituído
+    //O método paint é substituído
     @Override
     protected void paintComponent(Graphics g) {
         Graphics2D g2 = (Graphics2D)g;
-        //cria-se uma imagem na memória
+        //Cria-se uma imagem na memória
         Imagem_em_memoria = new BufferedImage(this.getWidth(), this.getHeight(), BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = Imagem_em_memoria.createGraphics();
         g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        //desenhe as imagens no recipiente
+        //Desenhe as imagens no recipiente
         g2d.drawImage(foto,0,0,this);
-        //toda a imagem é desenhada
+        //Toda a imagem é desenhada
         g2.drawImage(Imagem_em_memoria, 0, 0, this);
     }
 
@@ -70,12 +70,12 @@ public class paint extends JPanel {
         return this.foto;
     }
 
-    //mostra uma janela de diálogo para abrir um arquivo de imagem
+    //Mostra uma janela de diálogo para abrir um arquivo de imagem
     public boolean Abrir_Imagem(){
        boolean ok=false;
        fileChooser = new JFileChooser();
        fileChooser.setFileFilter(filter);
-       //fileChooser.setCurrentDirectory(new java.io.File("e:/"));
+       //FileChooser.setCurrentDirectory(new java.io.File("e:/"));
        fileChooser.setCurrentDirectory( Diretorio );
        int result = fileChooser.showOpenDialog(null);
        if ( result == JFileChooser.APPROVE_OPTION ){
@@ -95,11 +95,11 @@ public class paint extends JPanel {
        return ok;
     }
 
-     //Método que irá salvar a imagem
+     //Metodo que irá salvar a imagem
     public void guardar_imagem( BufferedImage foto ){        
         try {
             String tmp_file = this.PathFile.substring(0, this.PathFile.length()-4) + "_copia.bmp";
-            //está salvo           
+            //Está salvo           
             ImageIO.write(foto, "bmp", new File( tmp_file ));
             //System.out.println( tmp_file );
             JOptionPane.showMessageDialog(null, "Imagem salva em:\n"
