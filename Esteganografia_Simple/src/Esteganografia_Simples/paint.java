@@ -95,7 +95,7 @@ public class paint extends JPanel {
        return ok;
     }
 
-     //Metodo que irá salvar a imagem
+     //Método que irá salvar a imagem
     public void guardar_imagem( BufferedImage foto ){        
         try {
             String tmp_file = this.PathFile.substring(0, this.PathFile.length()-4) + "_copia.bmp";
